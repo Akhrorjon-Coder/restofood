@@ -251,7 +251,7 @@ header .icons #menu-bars{
 }
 
 .dishes .box-container .box .fa-heart,
-.dishes .dishes .box-container .box .fa-eye{
+.dishes .box-container .box .fa-eye{
     position: absolute;
     top: 1.5rem;
     background: #eee;
@@ -277,11 +277,11 @@ header .icons #menu-bars{
     left: -15rem;
 }
 
-.dishes .box-container .box .fa-heart:hover{
+.dishes .box-container .box:hover .fa-heart{
     right: 1.5rem;
 }
 
-.dishes .box-container .box .fa-eye:hover{
+.dishes .box-container .box:hover .fa-eye{
     left: 1.5rem;
 }
 
