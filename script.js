@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener("DOMContentLoaded",() =>{
+window.addEventListener("DOMContentLoaded",() =>{
    
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
@@ -91,6 +91,180 @@ var swiper = new Swiper(".home-slider", {
  setTimeout(function(){
    loader.style.display = "none";
 },3000);
+
+
+class dishesCard {
+   constructor(src,name,price,parentSelector,...classes){
+      this.src = src
+      this.name = name
+      this.price = price
+      this.parent =document.querySelector(parentSelector)
+      this.classes = classes
+   }
+
+   render(){
+      const element = document.createElement('div')
+      if(this.classes.length === 0){
+         this.classes = 'box'
+         element.classList.add(this.classes)
+      }else{
+         this.classes.forEach(className => element.classList.add(className))
+      }
+      element.innerHTML = `
+      <div class="box">
+         <div class="boxContent">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src=${this.src} alt="">
+            <h3>${this.name}</h3>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>${this.price}</span>
+            <a href="#" class="btn">add to cart</a>
+         </div>
+      </div>`;
+      this.parent.append(element)
+   }
+}
+
+new dishesCard(
+   'images/dish-1.png',
+   'tasty food',
+   '$15.99',
+   '.dishes .box-container'
+).render();
+new dishesCard(
+   'images/dish-1.png',
+   'tasty food',
+   '$15.99',
+   '.dishes .box-container'
+).render();
+new dishesCard(
+   'images/dish-1.png',
+   'tasty food',
+   '$15.99',
+   '.dishes .box-container'
+).render();
+new dishesCard(
+   'images/dish-1.png',
+   'tasty food',
+   '$15.99',
+   '.dishes .box-container'
+).render();
+new dishesCard(
+   'images/dish-1.png',
+   'tasty food',
+   '$15.99',
+   '.dishes .box-container'
+).render();
+new dishesCard(
+   'images/dish-1.png',
+   'tasty food',
+   '$15.99',
+   '.dishes .box-container'
+).render();
+
+
+
+// class menuCard {
+//    constructor(src,name,price,parentSelector,...classes){
+//       this.src = src
+//       this.name = name
+//       this.price = price
+//       this.parent =document.querySelector(parentSelector)
+//       this.classes = classes
+//    }
+
+//    render(){
+//       const element = document.createElement('div')
+//       if(this.classes.length === 0){
+//          this.classes = 'box'
+//          element.classList.add(this.classes)
+//       }else{
+//          this.classes.forEach(className => element.classList.add(className))
+//       }
+//       element.innerHTML = `
+//       <div class="box">
+//          <div class="boxContent">
+//             <a href="#" class="fas fa-heart"></a>
+//             <a href="#" class="fas fa-eye"></a>
+//             <img src=${this.src} alt="">
+//             <h3>${this.name}</h3>
+//             <div class="stars">
+//                <i class="fas fa-star"></i>
+//                <i class="fas fa-star"></i>
+//                <i class="fas fa-star"></i>
+//                <i class="fas fa-star"></i>
+//                <i class="fas fa-star-half-alt"></i>
+//             </div>
+//             <a href="#" class="btn">add to cart</a>
+//             <span>${this.price}</span>
+//          </div>
+//       </div>`;
+//       this.parent.append(element)
+//    }
+// }
+
+// new menuCard(
+//    'images/menu-1.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+// new menuCard(
+//    'images/menu-2.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+// new menuCard(
+//    'images/menu-3.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+// new menuCard(
+//    'images/menu-4.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+// new menuCard(
+//    'images/menu-5.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+// new menuCard(
+//    'images/menu-6.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+// new menuCard(
+//    'images/menu-7.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+// new menuCard(
+//    'images/menu-8.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+// new menuCard(
+//    'images/menu-9.jpg',
+//    'tasty food',
+//    '$15.99',
+//    '.menu .box-container'
+// ).render();
+
 
 });
 
